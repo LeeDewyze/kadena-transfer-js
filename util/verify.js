@@ -320,10 +320,10 @@ const getDetails = async function(account, chainId, host){
       keyPairs: Pact.crypto.genKeyPair(),
       meta:  Pact.lang.mkMeta(account, chainId, 0.00001, 600, creationTime(), 600)
     }, host)
-    if (accountInfo.result.status ==="failure") {
+    if (accountInfo.status ==="failure") {
       return null;
-    } else if(accountInfo.result.status ==="success") {
-      accountDetails = accountInfo.result.data;
+    } else if(accountInfo.status ==="success") {
+      accountDetails = accountInfo.data;
       return { account: account, details: accountDetails };
     }
   } catch(e){

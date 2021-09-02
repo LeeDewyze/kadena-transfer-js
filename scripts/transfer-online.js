@@ -20,7 +20,13 @@ const {
 const { transfer } = require("../util/create-cmd.js");
 
 const main = async () => {
- let node, chainId, senderAcct, receiverAcct, amount, senderPublicKey, senderPrivateKey;
+ let node = 'api.testnet.chainweb.com'
+ let chainId= '1'
+ let senderAcct='T_jacky'
+ let receiverAcct='T_jacky_2'
+ let amount = 1
+ let senderPublicKey='d9154c50fc602a9d56464e3217abc8286f87e6e6c3faa93e23e4f4ce774ba7e6'
+ let senderPrivateKey = '75416ffb2c46177229aa230390e6c2abb3aeaf1466e204f6ffd9f3daca1bd1fd'
  await runOnlineTransfer(node, chainId, senderAcct, receiverAcct, amount, senderPublicKey, senderPrivateKey);
  exit();
 }
